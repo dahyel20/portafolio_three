@@ -1,13 +1,15 @@
-import { useState } from 'react'
-import './App.css'
-import Spline from '@splinetool/react-spline';
+import React, { Suspense, lazy, useState, useEffect } from 'react';
+import './App.css';
+import MiniRoom from './miniRoom.jsx'
+import Room from './room';
 
 function App() {
   return (
-    <div className='room'>
-       <Spline scene="https://prod.spline.design/3Bgoe19mfz-E0JZr/scene.splinecode" />
+    <div>
+      <Room></Room>
+      <MiniRoom />
     </div>
   );
 }
 
-export default App
+export default App;
